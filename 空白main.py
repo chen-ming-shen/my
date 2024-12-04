@@ -1,3 +1,8 @@
+#想要构建一个可以用语言逻辑来训练的网络
+#通过自然语言来训练网络的逻辑
+
+
+
 import json
 from collections import defaultdict
 import random
