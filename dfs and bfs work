@@ -1,0 +1,6 @@
+i code implment dfs and bfs in python
+i need a code documentation on the it and write down
+在Python中实现DFS和BFS的代码
+我需要一个关于它的代码文档并写下来。
+
+我现在仅仅给迷宫添加了一个包围的墙壁，和存储四周是否为墙壁的一个列表
