@@ -75,24 +75,62 @@ def dfs_choice (maze,start,end):
     coord.append(coord_obj)#在地图里位置的值
     coord.append(cl_my)#当前我的位置
     return coord
-def coord_my (maze,dfs_choice):
+    
+def coord_f_b_l_r (maze,dfs_choice):
     coord_obj=[]
     cl_my=[]
     cl_my.append(dfs_choice[1])
     dfs_choice_coord=dfs_choice[0]
     coord_obj.append(dfs_choice_coord[0])
-    return 0
+    #cl_my是当前的位置，coord_obj是当前位置的值
+    #求出当前位置四周的值判断接下来前进的方向
+    front=[]
+    back=[]
+    left=[]
+    right=[]
+    now=cl_my[0]
+    
+    front_tmp=now[0]
+    front_tmp -= 1
+    front=[front_tmp]
+    front.append(now[1])
+    
+    back_tmp=now[0]
+    back_tmp += 1 
+    back=[back_tmp]
+    back.append(now[1])
+    
+    left_tmp=now[1]
+    left_tmp -= 1
+    left=[left_tmp]
+    left.insert(0,now[0])
+    
+    right_tmp=now[1]
+    right_tmp += 1
+    right=[right_tmp]
+    right.insert(0,now[0])
+    
+    now_tmp=[front]+[back]+[left]+[right]
+
+    coord=[]
+    for tmp_of_now in now_tmp:
+        now_tmp_Y = tmp_of_now[1]
+        now_tmp_X = tmp_of_now[0]
+        maze_tmp=maze[now_tmp_X]
+        coord_tmp=maze_tmp[now_tmp_Y]
+        coord.append(coord_tmp)
+    return coord
 def dfs (coord,maze,choice):#深度优先搜索
     pass
 def bfs (maze,start,end):#广度优先搜索
     pass
 maze=main_line()
 dfs_choice=dfs_choice(maze,start,end)
-coord_my=coord_my(maze,dfs_choice)
+coord_f_b_l_r=coord_f_b_l_r(maze,dfs_choice)
 
 print(maze)
 print(dfs_choice)
-print(coord_my)
+print(coord_f_b_l_r)
 
 print(dfs(maze,start,end))
 print(bfs(maze,start,end))
