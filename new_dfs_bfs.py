@@ -15,25 +15,21 @@ def dfs (maze,start,end):#深度
     route=[]#这个是记录路径的
     start_my=start#使用一个变量保存动态的位置
     intersection=[]#记录遇到的路口
-    
-    while True:
-        intersection=[]
-        for maze_y in maze[start_my[0]]:
-            for maze_x in maze_y[start_my[1]]:
-                route.append(maze_y)#记一个点
-        #存储方向的变量
-        direction=[
+    direction=[
         [start_my[0],start_my[1]-1],
         [start_my[0],start_my[1]+1],
         [start_my[0]-1,start_my[1]],
         [start_my[0]+1,start_my[1]]
-        ]
-        for start_my_tmp in direction
-            if start_my_tmp[0] <= 0:
-                if start_my_tmp[1] <=0:
-                    intersection.append(start_my_tmp)
-                    #记录当前位置遇到的路口，如果没有路口则记录的是下一步的位置
+        ]#存储方向的变量
+    
+    while True:
+        if start_my == end:
+            return route
+        for 
+    return intersection
     pass
 def bfs (maze,start,end):#广度
     pass
 #输出路径怎么走和有几个走法
+dfs_print=dfs(maze,start,end)
+print(dfs_print)
