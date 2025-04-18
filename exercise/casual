@@ -1,0 +1,15 @@
+temp_data = [65, 68, 72, 70, 69, 71, 75]
+#求平均值和高于70的值
+data=[]
+for tmp in temp_data :
+    if tmp > 70 :
+        print(tmp) 
+        data.append(tmp)
+    else:
+        
+        print("没有")
+
+Average=0
+for tmp_data in temp_data:
+    Average=Average + tmp_data
+print(Average/len(temp_data),data)
