@@ -1,3 +1,5 @@
+import math
+
 # 给定振动传感器数据：vibration = [2.1, 3.0, None, 2.8, 3.2, None, 2.9]
 # 要求：1. 删除None值 2. 计算有效数据的平均值
 vibration = [2.1, 3.0, None, 2.8, 3.2, None, 2.9]
@@ -36,5 +38,111 @@ def check_alert(temps, threshold):
         else:
             Record=0
             third=[]
-    print("警报",third,"有",Record,"次连续超过阈值")
+    print(f"警报{third}有{Record}次连续超过阈值")
 check_alert(temps, threshold)
+
+#2025/4/20
+s1 = 72
+s2 = 85
+r = s2 / s1-1
+print(f'小明提供了{r:.2f}%')
+
+#请用索引取出下面list的指定元素：
+L = [
+    ['Apple', 'Google', 'Microsoft'],
+    ['Java', 'Python', 'Ruby', 'PHP'],
+    ['Adam', 'Bart', 'Bob']
+]
+# 打印Apple:
+print(L[0][0])
+# 打印Python:
+print(L[1][1])
+# 打印Bob:
+print(L[-1][-1])
+
+print("")
+"""
+练习
+小明身高1.75，体重80.5kg。请根据BMI公式（体重除以身高的平方）帮小明计算他的BMI指数，并根据BMI指数：
+低于18.5：过轻
+18.5-25：正常
+25-28：过重
+28-32：肥胖
+高于32：严重肥胖
+用if-elif判断并打印结果：
+"""
+height = 1.75
+weight = 80.5
+
+bmi = weight/(height**2)
+def bmi_tmp(bmi,consequence):
+    print (f"小明的BMI指数是{bmi:.2f}，结果是{consequence}")
+if bmi<18.5 :
+    consequence="低于18.5：过轻"
+    bmi_tmp(bmi,consequence)
+elif 18.5 <bmi<=25:
+    consequence="18.5-25：正常"
+    bmi_tmp(bmi,consequence)
+elif 25 <bmi<=28:
+    consequence="25-28：过重"
+    bmi_tmp(bmi,consequence)
+elif 28 <bmi<=32:
+    consequence="28-32：肥胖"
+    bmi_tmp(bmi,consequence)
+elif 32<bmi:
+    consequence="高于32：严重肥胖"
+    bmi_tmp(bmi,consequence)
+else:
+    print("错误")
+    
+#练习
+#请利用循环依次对list中的每个名字打印出Hello, xxx!：
+
+L = ['Bart', 'Lisa', 'Adam']
+for l in L:
+    print(f"hello,{l}!")
+
+#练习
+#请利用Python内置的hex()函数把一个整数转换成十六进制表示的字符串：
+
+n1 = 255
+n2 = 1000
+
+print(hex(n1))
+print(hex(n2))
+
+#定义一个函数quadratic(a, b, c)，接收3个参数，返回一元二次方程 
+#a*x**2+b*x+c 的两个解
+def quadratic(a, b, c):
+    x1=(-b+math.sqrt(b**2-4*a*c))/(2*a)
+    x2=(-b-math.sqrt(b**2-4*a*c))/(2*a)
+    x=[x1,x2]
+    return x
+x=quadratic(1,3,1)
+print(f"x的两个值是{x[0]:.2f}和{x[1]:.2f}")
+
+#以下函数允许计算两个数的乘积，请稍加改造，变成可接收一个或多个数并计算乘积：
+def mul(x,**more):
+    print()
+"""
+# 测试
+print('mul(5) =', mul(5))
+print('mul(5, 6) =', mul(5, 6))
+print('mul(5, 6, 7) =', mul(5, 6, 7))
+print('mul(5, 6, 7, 9) =', mul(5, 6, 7, 9))
+if mul(5) != 5:
+    print('mul(5)测试失败!')
+elif mul(5, 6) != 30:
+    print('mul(5, 6)测试失败!')
+elif mul(5, 6, 7) != 210:
+    print('mul(5, 6, 7)测试失败!')
+elif mul(5, 6, 7, 9) != 1890:
+    print('mul(5, 6, 7, 9)测试失败!')
+else:
+    try:
+        mul()
+        print('mul()测试失败!')
+    except TypeError:
+        print('测试成功!')
+"""
+print(mul(0,1,2))
