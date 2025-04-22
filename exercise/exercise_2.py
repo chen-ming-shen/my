@@ -1,3 +1,5 @@
+
+"""
 maze = [
   [0, 0, 1, 0],
   [1, 0, 1, 0],
@@ -29,3 +31,29 @@ while True:
         else:
             break
 print(use_stack)
+"""
+
+
+#利用切片操作，实现一个trim()函数，去除字符串首尾的空格，注意不要调用str的strip()方法：
+
+def trim(s):
+    for  tmp  in range(len(s)):
+        break
+    print (s[0:3])
+    return len (s)
+
+# 测试:
+if trim('hello  ') != 'hello':
+    print('测试失败!')
+elif trim('  hello') != 'hello':
+    print('测试失败!')
+elif trim('  hello  ') != 'hello':
+    print('测试失败!')
+elif trim('  hello  world  ') != 'hello  world':
+    print('测试失败!')
+elif trim('') != '':
+    print('测试失败!')
+elif trim('    ') != '':
+    print('测试失败!')
+else:
+    print('测试成功!')
