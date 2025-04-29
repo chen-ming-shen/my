@@ -1,5 +1,12 @@
-My professional skills are very poor, and my foreign language is also very poor,
-which just reminds me that I am doing this.
-我的专业技术很差，外语也很差。
-\n这提醒了我我正在做这件事。
-Here are some of my homework.
+# **开始于2025/5/1**
+## 要把每次学习的内容列在这里
+---
+### ***5/1***
+- *今天去部署python环境和pytoch*
+- *去随便看看官方的教程*
+---
+**今天更新的目录：**
+
+- `pytorch101`
+    - `README.md`
+    - `study_pytorch.txt`
