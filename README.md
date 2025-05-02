@@ -5,13 +5,9 @@
 
 
 ---
-### ***5/1***
-- *今天去部署python环境和pytorch* **完成**
-- *去随便看看官方的教程* **完成**
+### ***5/2***
+- *更新python练习的内容*
 ---
 **今天更新的目录：**
-
-- `pytorch101`
-    - `README.md`
-    - `study_pytorch.txt`
-    - `day_1.py`
+- `exercise`
+    - `exercise_4.py`
