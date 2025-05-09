@@ -5,8 +5,8 @@
 
 ---
 ### ***5/7***
-- *更新exercise_6的题目*
+~~- *更新exercise_6的题目*~~
 ---
 **今天更新的目录：**
 - `exercise`
-    - `exercise_6.py`
+    ~~- `exercise_6.py`~~
