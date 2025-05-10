@@ -10,4 +10,11 @@
 **今天更新的目录：**
 - `pytorch101`
     - ~~`exercise_6.py`~~
-     和
+---
+关于模型
+@misc{Fengshenbang-LM,
+  title={Fengshenbang-LM},
+  author={IDEA-CCNL},
+  year={2021},
+  howpublished={\url{https://github.com/IDEA-CCNL/Fengshenbang-LM}},
+}
