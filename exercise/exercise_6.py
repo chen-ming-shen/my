@@ -38,3 +38,60 @@ def dynamic_temperature(step,total_steps):
         return 0.5
 for _ in range(1,11):
     print(dynamic_temperature(_,10),)
+    
+    
+    
+    
+#为了统计学生人数，可以给Student类增加一个类属性，每创建一个实例，该属性自动增加：
+class Student(object):
+    count = 0
+
+    def __init__(self, name):
+        self.name = name
+        Student.count+=1
+
+# 测试:
+if Student.count != 0:
+    print('测试失败!')
+else:
+    bart = Student('Bart')
+    if Student.count != 1:
+        print('测试失败!')
+    else:
+        lisa = Student('Bart')
+        if Student.count != 2:
+            print('测试失败!')
+        else:
+            print('Students:', Student.count)
+            print('测试通过!')
+            
+#利用@property给一个Screen对象加上width和height属性，以及一个只读属性resolution：
+class Screen(object):
+    def __init__(self,width=0,height=0):
+        self._width=width
+        self._height=height
+    @property
+    def width(self):
+        return self._width
+    @width.setter#与上面的方法共同定义一个属性，并且加上"可写"功能
+    def width(self,v):
+        self._width=v
+    @property
+    def height(self):
+        return self._height
+    @height.setter
+    def height(self,v):
+        self._height=v
+    @property#改变调用语法，并且"只读"
+    def resolution(self):
+        return self._width*self._height
+
+# 测试:
+s = Screen()
+s.width = 1024
+s.height = 768
+print('resolution =', s.resolution)
+if s.resolution == 786432:
+    print('测试通过!')
+else:
+    print('测试失败!')
